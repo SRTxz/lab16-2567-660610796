@@ -121,7 +121,9 @@ export const DELETE = async (request: NextRequest) => {
     return NextResponse.json({
     ok: false, 
     message: "Student ID does not exist",
-    });
+    },
+    { status: 404 }
+    );
   }
   //perform removing student from DB. You can choose from 2 choices
   //1. use array filter method
